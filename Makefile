@@ -7,5 +7,9 @@ libfastcluster.so: fastcluster.o
 fastcluster.o: src/fastcluster.cpp
 	$(CC) -fPIC -c src/fastcluster.cpp -o fastcluster.o
 
+install :
+	mkdir lib
+	mv libfastcluster.so lib/libfastcluster.so
+
 clean ::
 	rm -f fastcluster.o
